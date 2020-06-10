@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Check Login functionality" parallel="tests">
+	<test name="Check Login functionality in Android Pixel 3a API R">
+		<parameter name="platformName" value="Android" />
+		<parameter name="deviceName" value="Pixel3" />
+		<parameter name="systemPort" value="10000" />
+		<parameter name="chromeDriverPort" value="11000" />
+		<classes>
+			<class name="runners.LoginRunner"/>
+		</classes>
+	</test>
+</suite>

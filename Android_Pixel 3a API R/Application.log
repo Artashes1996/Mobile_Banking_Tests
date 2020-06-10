@@ -1,0 +1,10 @@
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:00.543 ServerManager:20 - Starting Appium Server.
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:04.758 ServerManager:29 - Appium server started
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:04.798 DriverManager:28 - initializing Appium driver
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:04.836 PropertyManager:17 - loading config properties
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:04.839 CapabilitiesManager:18 - getting capabilities
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:04.843 CapabilitiesManager:34 - appUrl isC:\Projects\appium-cucumberbdd-testng\src\test\resources\apps\Android.SauceLabs.Mobile.Sample.app.2.2.1.apk
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:18.425 DriverManager:40 - Driver is initialized
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:21.821 BaseScreen:63 - login with <username>
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:23.278 BaseScreen:63 - password is <password>
+[Android_Pixel 3a API R INFO ] 2020-06-05 16:40:37.815 VideoManager:30 - video path: Android_Pixel 3a API R\Videos\Login with invalid user name.mp4

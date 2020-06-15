@@ -3,7 +3,6 @@ package api;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
-import io.restassured.specification.ResponseSpecification;
 
 import java.io.IOException;
 import java.util.Random;
@@ -25,11 +24,13 @@ public class HttpCallBuilder {
 //        FileWriter fileWriter = new FileWriter("pathName");
 //        ObjectMapper mapper = new ObjectMapper();
 //        JSONObject root = mapper.readValue(new File(pathName), JSONObject.class);
+//          root.replace("Name", entityName)
 //          fileWriter.write(String.valueOf(root));
+//    return root
 //    }
 
     public void sendLoginRequest(String Url) throws IOException {
         RequestSpecification requestBody = setContentType().body(jsonBody.getLoginRequestBody());
-        ResponseSpecification response = (ResponseSpecification) requestBody.when().post(Url).then().assertThat().statusCode(200);
+        requestBody.when().post(Url).then().assertThat().statusCode(200);
     }
 }

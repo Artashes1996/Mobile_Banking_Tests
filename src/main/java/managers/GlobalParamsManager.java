@@ -68,9 +68,10 @@ public class GlobalParamsManager {
     public void initializeGlobalParams(){
         GlobalParamsManager params = new GlobalParamsManager();
         params.setPlatformName(System.getProperty("platformName", "Android"));
-        params.setDeviceName(System.getProperty("deviceName", "Pixel 3a API R"));
+
         switch(params.getPlatformName()){
             case "Android":
+                params.setDeviceName(System.getProperty("deviceName", "Pixel 3a API R"));
                 params.setSystemPort(System.getProperty("systemPort", "10000"));
                 params.setChromeDriverPort(System.getProperty("chromeDriverPort", "11000"));
                 break;

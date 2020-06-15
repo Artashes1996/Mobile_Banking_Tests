@@ -11,21 +11,21 @@ public class PropertyManager {
     private TestUtils utils = new TestUtils();
 
     public Properties getProperties(String propertiesFileName) throws IOException {
-        InputStream is = null;
+        InputStream inputStream = null;
 
         if(properties.isEmpty()){
             try{
                 utils.log().info("loading" + propertiesFileName);
-                is = getClass().getClassLoader().getResourceAsStream(propertiesFileName);
-                assert is != null;
-                properties.load(is);
+                inputStream = getClass().getClassLoader().getResourceAsStream(propertiesFileName);
+                assert inputStream != null;
+                properties.load(inputStream);
             } catch (IOException e) {
                 e.printStackTrace();
                 utils.log().fatal("Failed to load" + propertiesFileName + "ABORT!!" + e.toString());
                 throw e;
             } finally {
-                if(is != null){
-                    is.close();
+                if(inputStream != null){
+                    inputStream.close();
                 }
             }
         }

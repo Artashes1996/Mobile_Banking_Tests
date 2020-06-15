@@ -16,9 +16,9 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.UNDERSCORE;
 @RunWith(Cucumber.class) @CucumberOptions(
         plugin = {"pretty", "html:target/cucumber", "summary",
         "de.monochromata.cucumber.report.PrettyReports:target/cucumber-html-reports"},
-        features = {"src/test/java/features"},
+        features = {"src/test/java/features/Login.feature"},
         snippets = UNDERSCORE, glue = {"steps"}, dryRun = false,
-        monochrome = true, strict = true, tags = {"@test"})
+        monochrome = true, strict = true)
 
 public class LoginRunner {
 

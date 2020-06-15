@@ -5,11 +5,11 @@ import screens.HomeScreen;
 
 public class HomeSteps {
 
-    @When("^I click on Filter Icon - In Home Screen$")
-    public void clickOnLoginButton() { new HomeScreen().ClickOnFilterIcon(); }
+    @When("^I click on Filter Icon - in Home Screen$")
+    public void clickOnFilterIcon() { new HomeScreen().ClickOnFilterIcon(); }
 
-    @When("^I click on NameToZButton - In Sort Items By Popup")
-    public void clickOnSortItems() { new HomeScreen().ClickOnNameAtoZButton(); }
+    @When("^I click on Name_Z_To_A_Button - in Sort Items By Popup")
+    public void clickOnNameZToAButton() { new HomeScreen().ClickOnNameAtoZButton(); }
 
 
 }

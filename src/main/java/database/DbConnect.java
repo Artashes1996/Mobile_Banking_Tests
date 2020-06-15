@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class DbConnect {
 
-//    private SQLQuery sqlQuery = new SQLQuery();
+    private SQLQuery sqlQuery = new SQLQuery();
     private Connection connection;
     private Statement statement;
 
@@ -21,10 +21,32 @@ public class DbConnect {
             statement = connection.createStatement();
             switch (item) {
                 case "Item_1":
-//                    statement.execute(sqlQuery.queryForAddItem_1(itemName));
+                   statement.execute(sqlQuery.queryForAddItem(itemName));
                     break;
                 case "Item_2":
 //                    statement.execute(sqlQuery.queryForAddItem_2(itemName));
+                    break;
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        } finally {
+            try {
+                this.connection.createStatement().close();
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        }
+    }
+
+    public void updateItem(String item, String itemName) {
+        try {
+            statement = connection.createStatement();
+            switch (item) {
+                case "Item_1":
+                    statement.execute(sqlQuery.queryForUpdateItem(itemName));
+                    break;
+                case "Item_2":
+//                    statement.execute(sqlQuery.queryForUpdateItem_1(itemName));
                     break;
             }
         } catch (Exception exception) {
